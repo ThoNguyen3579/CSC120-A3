@@ -1,9 +1,7 @@
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Arrays;
 
 // You should **not** update any call signatures in this file
 // only modify the body of each function
@@ -90,16 +88,15 @@ class Conversation implements ConversationRequirements {
       // run a loop to check each elements inside arr and replace them accordingly with the mirrored word
       for (int i = 0; i < prep_arr.length; i++){
         if ("i".equals(prep_arr[i]) || "me".equals(prep_arr[i])){
-          arr.replaceAll(s -> s.replace("i", "you"));
-          arr.replaceAll(s -> s.replace("me","you"));
+          arr.set(i, "you");
         } else if ("you".equals(prep_arr[i])){
-          arr.replaceAll(s -> s.replace("you","I"));
+          arr.set(i,"I");
         } else if ("am".equals(prep_arr[i])){
-          arr.replaceAll(s -> s.replace("am","are"));
+          arr.set(i,"are");
         } else if ("my".equals(prep_arr[i])){
-          arr.replaceAll(s -> s.replace("my","your"));
+          arr.set(i,"your");
         } else if ("your".equals(prep_arr[i])){
-          arr.replaceAll(s -> s.replace("your","my"));
+          arr.set(i,"my");
         }
       returnString = String.join(" ", arr);
       returnString = returnString + "?";
