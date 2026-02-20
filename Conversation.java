@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+
 // You should **not** update any call signatures in this file
 // only modify the body of each function
 
@@ -98,6 +99,7 @@ class Conversation implements ConversationRequirements {
         } else if ("your".equals(prep_arr[i])){
           arr.set(i,"my");
         }
+
       returnString = String.join(" ", arr);
       returnString = returnString + "?";
       }
