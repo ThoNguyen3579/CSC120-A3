@@ -26,7 +26,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 **YES** 1 pt: Detects the requested set of mirror words (at minimum)
 
-**PART** 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
+**YES** 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
 
 ### Level 3 (3 pts)
 
