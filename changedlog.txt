@@ -1,0 +1,4 @@
+The error that got me wrong is :Replaces some mirror words, but misses others (e.g. the first detected mirror word in a sentence, but misses subsequent mirror words) or adds extra replacements (e.g. I feel -> you are)
+The specific instance was that when I ask "Can I see me?", it will just answer "Can you see me?". This is because I put "I" and "me" in the same if statement in the respond method.
+
+Therefore, I just turned them into two different if statements instead!

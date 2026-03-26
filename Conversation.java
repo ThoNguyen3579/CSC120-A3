@@ -76,7 +76,7 @@ class Conversation implements ConversationRequirements {
     // create a list to prepare for the array by turning the characters into all lowercase, and then split them through space
     String [] prep_arr = inputString.toLowerCase().split(" ");
     // create an array list called arr that has the elements of prep_arr
-    ArrayList<String> arr = new ArrayList<>();
+    ArrayList<String> arr = new ArrayList<>(prep_arr.length);
     for (int i = 0; i < prep_arr.length; i++){
       arr.add(prep_arr[i]);
     }
@@ -88,8 +88,10 @@ class Conversation implements ConversationRequirements {
     || arr.contains("am") || arr.contains("my") || arr.contains("your")){
       // run a loop to check each elements inside arr and replace them accordingly with the mirrored word
       for (int i = 0; i < prep_arr.length; i++){
-        if ("i".equals(prep_arr[i]) || "me".equals(prep_arr[i])){
+        if ("i".equals(prep_arr[i])){
           arr.set(i, "you");
+        } else if ("me".equals(prep_arr[i])){
+          arr.set(i,"you");
         } else if ("you".equals(prep_arr[i])){
           arr.set(i,"I");
         } else if ("am".equals(prep_arr[i])){
